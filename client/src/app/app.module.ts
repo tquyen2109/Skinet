@@ -11,9 +11,11 @@ import { AppComponent } from './app.component';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { BasketComponent } from './basket/basket.component';
 @NgModule({
   declarations: [
     AppComponent,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,
