@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.Data;
 using API.Errors;
 using System.Linq;
+using Infrastructure.Services;
 
 namespace API.Extension
 {
@@ -13,6 +14,7 @@ namespace API.Extension
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository,BasketRepository>();
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.Configure<ApiBehaviorOptions>(options =>
             {
