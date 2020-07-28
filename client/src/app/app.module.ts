@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { HomeModule } from './home/home.module';
@@ -24,6 +25,7 @@ import { BasketComponent } from './basket/basket.component';
     HttpClientModule,
     CoreModule,
     HomeModule,
+    SharedModule,
     NgxSpinnerModule,
   ],
   providers: [
