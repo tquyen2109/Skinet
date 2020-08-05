@@ -36,6 +36,13 @@ const routes: Routes = [
     data: { breadcrumb: 'Basket' },
   },
   {
+    path: 'orders',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./orders/orders.module').then((mod) => mod.OrdersModule),
+    data: { breadcrumb: 'Orders' },
+  },
+  {
     path: 'checkout',
     canActivate: [AuthGuard],
     loadChildren: () =>

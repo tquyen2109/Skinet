@@ -1,3 +1,4 @@
+import { OrdersModule } from './orders/orders.module';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { SharedModule } from './shared/shared.module';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
@@ -14,10 +15,12 @@ import {NgxSpinnerModule} from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { BasketComponent } from './basket/basket.component';
+import { OrderDetailComponent } from './orders/order-detail/order-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     BasketComponent,
+    OrderDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { BasketComponent } from './basket/basket.component';
     HomeModule,
     SharedModule,
     NgxSpinnerModule,
+    OrdersModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
