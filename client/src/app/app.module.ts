@@ -19,8 +19,7 @@ import { OrderDetailComponent } from './orders/order-detail/order-detail.compone
 @NgModule({
   declarations: [
     AppComponent,
-    BasketComponent,
-    OrderDetailComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
