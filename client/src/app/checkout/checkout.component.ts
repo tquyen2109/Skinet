@@ -1,3 +1,4 @@
+import { PagerComponent } from './../shared/components/pager/pager.component';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AccountService } from '../account/account.service';
@@ -54,10 +55,8 @@ export class CheckoutComponent implements OnInit {
 
   getDeliveryMethodValue() {
     const basket = this.basketService.getCurrentBasketValue();
-    if (basket.deliveryMethodId !== undefined) {
-      console.log(basket.deliveryMethodId);
+    if (basket.deliveryMethodId != undefined || basket.deliveryMethodId != null ) {   
       this.checkoutForm.get('deliveryForm').get('deliveryMethod').patchValue(basket.deliveryMethodId.toString());
     }
   }
-
 }
